@@ -1,0 +1,13 @@
+TABLE [transaksi_hepossynsignsvr]
+===================================
+synsign_id = [01100.0001300.XX-6628d68d790c0]
+synsign_type = [SENDDATA]
+synsign_dateclient = [2024-04-24 16:53:15]
+synsign_ip = [::1]
+synsign_hostname = [TFI-ATT]
+synsign_rmtip = [fe80::e144:5991:61f5:4c59%11]
+session_id = []
+synsign_note = [Data yg dikirim tgl :24-04-2024]
+region_id = [01100]
+branch_id = [0001300]
+username = [boss.tp4]

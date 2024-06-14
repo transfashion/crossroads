@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TransBrowser xmlns="http://tempuri.org/Template.xsd">
+	<Solutions>
+		<Master>
+			<Id>M00</Id>
+			<Icon>TbMaster.ico</Icon>
+			<Programs>
+				<Program>
+					<Id>M01</Id>
+					<Title>Account</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>GL</Ns>
+					<Dll>GL.dll</Dll>
+					<Instance>uiMstAccount</Instance>
+					<Parameter></Parameter>
+					<Description>Program untuk input Master Account</Description>
+					<Disabled>0</Disabled>
+				</Program>
+				<Program>
+					<Id>M02</Id>
+					<Title>Periode</Title>
+					<Icon>Program.ico</Icon>
+					<Ns>GL</Ns>
+					<Dll>GL.dll</Dll>
+					<Instance>uiMstPeriode</Instance>
+					<Parameter></Parameter>
+					<Description>Program untuk setting Periode</Description>
+					<Disabled>0</Disabled>
+				</Program>
+				<Program>
+					<Id>M03</Id>
+					<Title>Journal Type</Title>
+					<Icon>Program.ico</Icon>
+					<Ns>GL</Ns>
+					<Dll>GL.dll</Dll>
+					<Instance>uiMstJournalType</Instance>
+					<Parameter></Parameter>
+					<Description>Program untuk setting Periode</Description>
+					<Disabled>0</Disabled>
+				</Program>
+			</Programs>	
+		</Master>
+		<Transaksi>
+			<Id>T00</Id>
+			<Icon>TbTransaksi.ico</Icon>
+			<Programs>
+				<Program>
+					<Id>T01</Id>
+					<Title>Journal</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>GL</Ns>
+					<Dll>GL.dll</Dll>
+					<Instance>uiTrnJournal</Instance>
+					<Parameter>CHANNEL=TTV; CHANNEL_CANBE_CHANGED=0; CHANNEL_CANBE_BROWSED=0; VIEW_MODE=0;</Parameter>
+					<Description>Program untuk input transaksi jurnal</Description>
+					<Disabled>0</Disabled>				
+				</Program>
+				<Program>
+					<Id>T02</Id>
+					<Title>Journal Posting</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>GL</Ns>
+					<Dll>GL.dll</Dll>
+					<Instance>uiTrnJournal</Instance>
+					<Parameter>CHANNEL=TTV; CHANNEL_CANBE_CHANGED=0; CHANNEL_CANBE_BROWSED=0; POSTING_MODE=1; POSTING_AUTHORITY=1; UNPOSTING_AUTHORITY=0;</Parameter>
+					<Description>Program untuk proses posting journal</Description>
+					<Disabled>0</Disabled>
+				</Program>	
+				<Program>
+					<Id>T03</Id>
+					<Title>Journal UnPosting</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>GL</Ns>
+					<Dll>GL.dll</Dll>
+					<Instance>uiTrnJournal</Instance>
+					<Parameter>CHANNEL=TTV; CHANNEL_CANBE_CHANGED=0; CHANNEL_CANBE_BROWSED=0; POSTING_MODE=1; POSTING_AUTHORITY=0; UNPOSTING_AUTHORITY=1;</Parameter>
+					<Description>Program untuk proses posting journal</Description>
+					<Disabled>0</Disabled>
+				</Program>				
+				<Program>
+					<Id>T04</Id>
+					<Title>Closing</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>GL</Ns>
+					<Dll>GL.dll</Dll>
+					<Instance>uiTrnClosing</Instance>
+					<Parameter></Parameter>
+					<Description>Program untuk proses closing bulanan</Description>
+					<Disabled>0</Disabled>
+				</Program>				
+			</Programs>		
+		</Transaksi>
+		<Laporan>
+			<Id>L00</Id>
+			<Icon>TbLaporan.ico</Icon>
+			<Programs>
+				<Program>
+					<Id>L01</Id>
+					<Title>Buku Besar</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>GL</Ns>
+					<Dll>GL.dll</Dll>
+					<Instance>uiRptBukubesar</Instance>
+					<Parameter></Parameter>
+					<Description>Laporan Buku Besar</Description>
+					<Disabled>0</Disabled>
+				</Program>
+				<Program>
+					<Id>L02</Id>
+					<Title>Neraca</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>GL</Ns>
+					<Dll>GL.dll</Dll>
+					<Instance>uiRptNeraca</Instance>
+					<Parameter></Parameter>
+					<Description>Laporan Neraca</Description>
+					<Disabled>0</Disabled>
+				</Program>
+				<Program>
+					<Id>L03</Id>
+					<Title>Rugi Laba</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>GL</Ns>
+					<Dll>GL.dll</Dll>
+					<Instance>uiRptRugilaba</Instance>
+					<Parameter></Parameter>
+					<Description>Laporan Rugi Laba</Description>
+					<Disabled>0</Disabled>
+				</Program>
+				<Program>
+					<Id>L04</Id>
+					<Title>Rugi Laba Chart</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>GL</Ns>
+					<Dll>GL.dll</Dll>
+					<Instance>uiRptRugiLabaChart</Instance>
+					<Parameter></Parameter>
+					<Description>Laporan Rugi Laba Setahun dengan Grafik</Description>
+					<Disabled>0</Disabled>
+				</Program>
+			</Programs>		
+		</Laporan>						
+	</Solutions>
+
+	<Groups>
+		<Group>
+			<Id>ALLACCESS</Id>
+			<Name>ALL ACCESS</Name>
+			<Description>Administrator Group</Description>
+			<Disabled>0</Disabled>
+		</Group>
+
+
+		<Group>
+			<Id>STAFF</Id>
+			<Name>Staff Accounting</Name>
+			<Description>Staff Group</Description>
+			<Disabled>0</Disabled>
+			<ShowAllPrograms>0</ShowAllPrograms>
+			<Programs>
+				<Program><Id>T01</Id></Program>
+				<Program><Id>L01</Id></Program>
+				<Program><Id>L02</Id></Program>
+				<Program><Id>L03</Id></Program>
+			</Programs>
+		</Group>
+
+
+		<Group>
+			<Id>VIEWER</Id>
+			<Name>STaff View</Name>
+			<Description>Staff Group</Description>
+			<Disabled>0</Disabled>
+		</Group>
+
+	</Groups>
+</TransBrowser>

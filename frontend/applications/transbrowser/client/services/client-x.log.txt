@@ -1,0 +1,31 @@
+/* --------------------- 
+SELECT case when payment_cardnumber is not null then 0 else 1 end AS valueisnull, payment_cardnumber FROM transaksi_hepospayment WHERE bon_id = 'SL05.024.14.11010061' AND payment_line = '1' -> result: 0, value: 6019002547331134
+SELECT case when payment_cardholder is not null then 0 else 1 end AS valueisnull, payment_cardholder FROM transaksi_hepospayment WHERE bon_id = 'SL05.024.14.11010061' AND payment_line = '1' -> result: 0, value: 6019002547331134
+SELECT case when payment_mvalue is not null then 0 else 1 end AS valueisnull, payment_mvalue FROM transaksi_hepospayment WHERE bon_id = 'SL05.024.14.11010061' AND payment_line = '1' -> result: 0, value: 3800000
+SELECT case when payment_mcash is not null then 0 else 1 end AS valueisnull, payment_mcash FROM transaksi_hepospayment WHERE bon_id = 'SL05.024.14.11010061' AND payment_line = '1' -> result: 0, value: 0
+SELECT case when payment_installment is not null then 0 else 1 end AS valueisnull, payment_installment FROM transaksi_hepospayment WHERE bon_id = 'SL05.024.14.11010061' AND payment_line = '1' -> result: 0, value: 1
+SELECT case when pospayment_id is not null then 0 else 1 end AS valueisnull, pospayment_id FROM transaksi_hepospayment WHERE bon_id = 'SL05.024.14.11010061' AND payment_line = '1' -> result: 0, value: 220
+SELECT case when pospayment_name is not null then 0 else 1 end AS valueisnull, pospayment_name FROM transaksi_hepospayment WHERE bon_id = 'SL05.024.14.11010061' AND payment_line = '1' -> result: 0, value: BCA D
+SELECT case when pospayment_bank is not null then 0 else 1 end AS valueisnull, pospayment_bank FROM transaksi_hepospayment WHERE bon_id = 'SL05.024.14.11010061' AND payment_line = '1' -> result: 0, value: BCA
+SELECT case when posedc_id is not null then 0 else 1 end AS valueisnull, posedc_id FROM transaksi_hepospayment WHERE bon_id = 'SL05.024.14.11010061' AND payment_line = '1' -> result: 0, value: 
+SELECT case when posedc_name is not null then 0 else 1 end AS valueisnull, posedc_name FROM transaksi_hepospayment WHERE bon_id = 'SL05.024.14.11010061' AND payment_line = '1' -> result: 0, value: 
+SELECT case when bon_idext is not null then 0 else 1 end AS valueisnull, bon_idext FROM transaksi_hepospayment WHERE bon_id = 'SL05.024.14.11010061' AND payment_line = '1' -> result: 1, value: 
+SELECT case when rowid is not null then 0 else 1 end AS valueisnull, rowid FROM transaksi_hepospayment WHERE bon_id = 'SL05.024.14.11010061' AND payment_line = '1' -> result: 0, value: 92917EF7-95DB-4E64-AC3F-4E263532CCC7
+ ----------------------- */ 
+
+UPDATE transaksi_hepospayment 
+SET 
+  [payment_cardnumber]='6019002547331134', 
+  [payment_cardholder]='6019002547331134', 
+  [payment_mvalue]='3800000', 
+  [payment_mcash]='0', 
+  [payment_installment]='1', 
+  [pospayment_id]='220', 
+  [pospayment_name]='BCA D', 
+  [pospayment_bank]='BCA', 
+  [posedc_id]='', 
+  [posedc_name]='', 
+  [bon_idext]=NULL, 
+  [rowid]='92917EF7-95DB-4E64-AC3F-4E263532CCC7'
+WHERE 
+bon_id = 'SL05.024.14.11010061' AND payment_line = '1'

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TransBrowser xmlns="http://tempuri.org/Template.xsd">
+	<Solutions>
+		<Master>
+			<Id>M00</Id>
+			<Icon>TbMaster.ico</Icon>
+			<Programs>
+				<Program>
+					<Id>M01</Id>
+					<Title>Barang</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>TestDLL</Ns>
+					<Dll>TestDLL.dll</Dll>
+					<Instance>UserControl1</Instance>
+					<Description>Program untuk input Master Barang</Description>
+					<Disabled>0</Disabled>
+				</Program>
+				<Program>
+					<Id>M02</Id>
+					<Title>Kategori</Title>
+					<Icon>Program.ico</Icon>
+					<Ns>TransProp</Ns>
+					<Dll>TransProp.dll</Dll>
+					<Instance>UiKategori</Instance>
+					<Description>Program untuk input kategori dari Master Barang</Description>
+					<Disabled>0</Disabled>
+				</Program>
+				<Program>
+					<Id>M03</Id>
+					<Title>Programme</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>TransProp</Ns>
+					<Dll>TransProp.dll</Dll>
+					<Instance>UiProgramme</Instance>
+					<Description>Program untuk input daftar Programme Acara</Description>
+					<Disabled>0</Disabled>
+				</Program>
+				<Program>
+					<Id>M04</Id>
+					<Title>Periode</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>TransProp</Ns>
+					<Dll>TransProp.dll</Dll>
+					<Instance>UiPeriode</Instance>
+					<Description>Program untuk input dan setting Periode</Description>
+					<Disabled>0</Disabled>
+				</Program>
+			</Programs>		
+		</Master>
+		<Transaksi>
+			<Id>T00</Id>
+			<Icon>TbTransaksi.ico</Icon>
+			<Programs>
+				<Program>
+					<Id>T01</Id>
+					<Title>Peminjaman</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>TransProp</Ns>
+					<Dll>TransProp.dll</Dll>
+					<Instance>UiPeminjaman</Instance>
+					<Description>Program untuk proses peminjaman barang</Description>
+					<Disabled>0</Disabled>				
+				</Program>
+				<Program>
+					<Id>T02</Id>
+					<Title>Pengembalian</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>TransProp</Ns>
+					<Dll>TransProp.dll</Dll>
+					<Instance>UiPengembalian</Instance>
+					<Description>Program untuk proses pengembalian Barang</Description>
+					<Disabled>0</Disabled>
+				</Program>	
+			</Programs>		
+		</Transaksi>
+		<Laporan>
+			<Id>L00</Id>
+			<Icon>TbLaporan.ico</Icon>
+			<Programs>
+				<Program>
+					<Id>L01</Id>
+					<Title>Laporan Sirkulasi</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>TransProp</Ns>
+					<Dll>TransProp.dll</Dll>
+					<Instance>UiLaporanSirkulasi</Instance>
+					<Description>Laporan sirkulasi peminjaman dan pengembalian barang</Description>
+					<Disabled>0</Disabled>
+				</Program>
+				<Program>
+					<Id>L02</Id>
+					<Title>Summary</Title>
+					<Icon>Desktop.ico</Icon>
+					<Ns>TransProp</Ns>
+					<Dll>TransProp.dll</Dll>
+					<Instance>UiLaporanSummary</Instance>
+					<Description>Rekap Laporan</Description>
+					<Disabled>0</Disabled>
+				</Program>	
+			</Programs>		
+		</Laporan>						
+	</Solutions>
+
+	<Groups>
+		<Group>
+			<Id>ADMIN</Id>
+			<Name>Administrator</Name>
+			<Description>Administrator Group</Description>
+			<Disabled>0</Disabled>
+		</Group>
+
+
+		<Group>
+			<Id>STAFF</Id>
+			<Name>Staff Property</Name>
+			<Description>Staff Group</Description>
+			<Disabled>0</Disabled>
+			<ShowAllPrograms>0</ShowAllPrograms>
+			<Programs>
+				<Program><Id>M01</Id></Program>
+				<Program><Id>M03</Id></Program>
+				<Program><Id>T01</Id></Program>
+				<Program><Id>T02</Id></Program>
+				<Program><Id>L01</Id></Program>
+				<Program><Id>L02</Id></Program>
+			</Programs>
+		</Group>
+
+
+		<Group>
+			<Id>VIEWER</Id>
+			<Name>STaff View</Name>
+			<Description>Staff Group</Description>
+			<Disabled>0</Disabled>
+		</Group>
+
+	</Groups>
+</TransBrowser>

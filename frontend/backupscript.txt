@@ -1,0 +1,39 @@
+DECLARE @objectname as nvarchar(10);
+DECLARE @directory as nvarchar(500);
+DECLARE @filename  as nvarchar(500);
+DECLARE @backupfilename as nvarchar(600);
+DECLARE @weekdaynumber as int;
+DECLARE @weekdayname as nvarchar(20);
+DECLARE @date as nvarchar(10);
+DECLARE @year as nvarchar(4);
+DECLARE @month as nvarchar(2);
+DECLARE @day as nvarchar(2);
+DECLARE @hour as nvarchar(2);
+DECLARE @minute as nvarchar(2);
+
+SET @objectname = 'E_FRM2_MGP';
+SET @directory =  'D:\BACKUPDB\';
+SET @weekdaynumber = DATEPART(weekday, getdate());
+SET @weekdayname = CASE 
+			WHEN @weekdaynumber = 1 THEN 'Minggu'
+			WHEN @weekdaynumber = 2 THEN 'Senin'
+			WHEN @weekdaynumber = 3 THEN 'Selasa'
+			WHEN @weekdaynumber = 4 THEN 'Rabu'
+			WHEN @weekdaynumber = 5 THEN 'Kamis'
+			WHEN @weekdaynumber = 6 THEN 'Jumat'
+			WHEN @weekdaynumber = 7 THEN 'Sabtu'
+		    END; 
+
+
+
+SET @minute= dbo.f_zerofill(DATEPART(minute, getdate()),2);
+SET @hour  = dbo.f_zerofill(DATEPART(hour,   getdate()),2);
+SET @day   = dbo.f_zerofill(day(getdate()),2);
+SET @month = dbo.f_zerofill(month(getdate()),2);
+SET @year  = substring(cast(year(getdate()) as char(4)),3,2);
+ 
+SET @filename  = 'E_FRM2_MGP_' +  @year + @month + @day + '_' + @hour + @minute + '_' + @weekdayname + '.BAK';
+SET @backupfilename = @directory + @filename
+
+
+BACKUP DATABASE [E_FRM2_MGP] TO  DISK = @backupfilename WITH  INIT ,  NOUNLOAD ,  NAME = @objectname,  NOSKIP ,  STATS = 10,  NOFORMAT

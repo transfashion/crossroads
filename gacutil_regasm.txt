@@ -1,0 +1,20 @@
+
+		/* cek login...
+		   untuk bisa menggunakan fungsi ini, 
+		   pertama ambil file DataHash.dll dari TransBrowser Desktop
+		   habis itu di server Web, registrasikan fungsi DataHash.dll 
+           caranya:
+
+			Buka Visual Studio 2005 Command Prompt
+
+			registrasi dll,
+			regasm c:\DataHash.dll /tlb:DataHash.tlb 
+
+			cache dll
+			gacutil /i c:\DataHash.dll 
+
+			baru fungsi md5 .NET bisa dipake
+
+		*/
+
+
